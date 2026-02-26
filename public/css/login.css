@@ -1,0 +1,117 @@
+body {
+    height: 100vh;
+    background: url(Sample\ img-1.png) no-repeat center center/cover;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+/* Blur background overlay */
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Glass login card */
+.login-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    width: 30vw;
+    padding: 30px;
+    /* border-radius: 15px; */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    height: 100vh;
+    max-height: 100%;
+}
+
+.card-login {
+    width: 85%;
+    height: 50%;
+    /* margin-bottom: 24vh */
+}
+
+.mb-4 {
+    font-size: 5rem;
+}
+
+.form-control {
+    background: rgba(255, 255, 255, 0);
+    border: none;
+    color: #fff;
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* WebKit browsers */
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.8);
+    color: #1a1a1a;
+    box-shadow: none;
+}
+
+.form-control:focus::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.remider {
+    display: flex;
+    gap: 19vh;
+    margin-bottom: 20px;
+    border: none;
+}
+
+
+.forget {
+    display: flex;
+    justify-content: end;
+}
+
+.btn-1 {
+    background: black;
+    width: 100%;
+    color: white;
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.top-back-btn {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 9999
+}
+
+.top-back-btn {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 9999
+}
+
+@media (max-width: 990px) {
+    body { justify-content: center; padding: 20px; }
+    .login-card {
+        width: 100%;
+        max-width: 100vw;
+        max-height: auto;
+        height: auto;
+        border-radius: 15px;
+    }
+    .card-login { width:100%; margin-bottom: 0px !important; }
+     .remider { gap: 12vh; }
+     .mb-4 { font-size: 3rem; }
+     .top-back-btn { right: 12px; top: 12px; }
+}
